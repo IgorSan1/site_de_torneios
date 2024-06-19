@@ -1,2 +1,2 @@
 # site_de_torneios
-Projeto de website para gerenciar torneios com crud em Java
+Meu primeiro projeto feito em Java para gerenciar torneios com crud em Java
