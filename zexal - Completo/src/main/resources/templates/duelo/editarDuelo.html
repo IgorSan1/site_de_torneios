@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>DueloApp</title>
+    <!-- Import Google Icon Font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!-- Import materialize.css -->
+    <link type="text/css" rel="stylesheet" href="/materialize/css/materialize.min.css" media="screen,projection"/>
+    <!-- Let browser know website is optimized for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/style/styleCss.css"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper menu">
+                <a href="#" class="brand-logo">Editar Duelo</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a th:href="@{/detalhesDuelo/{codigo}(codigo=${duelo.codigo})}" class="waves-effect waves-light btn">
+                        <i class="material-icons left">list</i>Lista de Duelos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container formCadastro">
+        <form class="container" th:action="@{/editarDuelo/{codigo}(codigo=${duelo.codigo})}" th:object="${duelo}" method="post">
+            <div class="input-field">
+                <label for="nome">Nome: </label>
+                <input type="text" id="nome" th:field="*{nome}" required="required"/>
+            </div>
+            <div class="input-field">
+                <label for="local">Local: </label>
+                <input type="text" id="local" th:field="*{local}" required="required"/>
+            </div>
+            <div class="input-field">
+                <label for="horario">Horário: </label>
+                <input type="time" id="horario" th:field="*{horario}" required="required"/>
+            </div>
+            <div class="input-field">
+                <label for="data">Data: </label>
+                <input type="date" id="data" th:field="*{data}" required="required"/>
+            </div>
+            <button class="waves-effect waves-light btn" type="submit">
+                <i class="material-icons left">save</i>Salvar</button>
+        </form>
+    </div>
+    
+    <!-- Import jQuery before materialize.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/materialize/js/materialize.min.js"></script>
+</body>
+</html>

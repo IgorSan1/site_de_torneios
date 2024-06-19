@@ -1,0 +1,35 @@
+.detalhesDuelo{
+    box-shadow: 0px 0px 5px grey;
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-bottom: 60px;
+}
+
+.formDuelo{
+    box-shadow: 0px 0px 5px grey;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 60px;
+}
+
+.tabelaParticipante{
+    width: 50%;
+}
+
+.formCadastro{
+    box-shadow: 0px 0px 5px grey;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 60px;
+}
+
+.menu{
+	background-color: #1B2B47;
+}
+
+.custom-btn{
+    background-color: #00bfa5;
+}
+
